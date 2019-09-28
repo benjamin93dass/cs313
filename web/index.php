@@ -29,36 +29,7 @@
       </div>
     </nav>
 
-    <section id="showcase">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-sm-6">
-            <div class="showcase-left">
-              <img src="image1.jpg">
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <div class="showcase-right">
-              <h1>Hey everyone!</h1>
-              <p>My name is Benjamin Dass. I am a computer science major and I love learning new things. I'm originally from Malaysia. I come from a family of 7: a set
-              of parents, four of us brothers and a Rotweiller.</p>
-
-              <?php
-              	echo "Today's date is " . date("d-m-Y") . "<br>";
-              ?>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer id="testimonial">
-      <div class="container">
-        <p>"It is not necessary to do extraordinary things to get extraordinary results."</p>
-        <p class="customer">- Warren Buffett</p>
-      </div>
-    </footer>
+    <h3>CS 313: Web Engineering II</h3>
 
     <script
   src="https://code.jquery.com/jquery-3.2.1.js"
