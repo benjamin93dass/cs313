@@ -29,7 +29,7 @@
       </div>
     </nav>
 
-    <h3>CS 313: Web Engineering II</h3>
+    <p>CS 313: Web Engineering II</p>
 
     <script
   src="https://code.jquery.com/jquery-3.2.1.js"
