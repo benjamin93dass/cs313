@@ -29,7 +29,7 @@
       </div>
     </nav>
 
-    <div id="tertimonial">
+    <div id="testimonial">
       <p>CS 313: Web Engineering II</p>
     </div>
     
