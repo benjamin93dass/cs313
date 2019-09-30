@@ -33,7 +33,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <div class="info-left">
-              <button class="well col-md-12" onclick="window.location.href='week3/browse.php'>Shopping cart</button>
+              <button class="well col-md-12" onclick="window.location.href='week3/browse.php'">Shopping cart</button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
