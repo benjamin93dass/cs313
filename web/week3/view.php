@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['submit'])){
-    foreach ($_POST['Color'] as $select){
+    foreach ($_POST['addedItems'] as $select){
         $itemsInCart = array($select);
     }
 }
@@ -23,6 +23,8 @@ $arrlength = count($itemsInCart);
         for($x = 0; $x < $arrlength; $x++){
             echo $itemsInCart[$x];
             echo "<br>";
+            echo "test":
+            echo "<br>"
         }
         ?>
     </body>

@@ -8,7 +8,7 @@
     <body>
         <form method="post" action="view.php">
             <p>Please select from the following:<br></p>
-            <select name="itemsInCart[]" multiple>
+            <select name="addedItems[]" multiple>
             <option value="watch">Watch</option>
             <option value="table">Table</option>
             <option value="laptop">Laptop</option>
