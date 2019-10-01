@@ -1,7 +1,7 @@
 <?php
 
 if(isset($_POST['submit'])){
-    $itemsInCart = htmlspecialchars($_POST['addedItems']);
+    $itemsInCart = $_POST['addedItems'];
 }
 
 $arrlength = count($itemsInCart);
