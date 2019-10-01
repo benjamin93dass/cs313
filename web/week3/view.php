@@ -17,9 +17,6 @@ $arrlength = count($itemsInCart);
     </head>
     <body>
         <h1>Items in cart:</h1><br> 
-        <?php
-        var_dump($itemsInCart);
-        ?>
         <?php 
         for($x = 0; $x < $arrlength; $x++){
             echo $itemsInCart[$x];
