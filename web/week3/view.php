@@ -20,6 +20,12 @@ $arrlength = count($itemsInCart);
         <?php
         var_dump($itemsInCart);
         ?>
+        <?php 
+        for($x = 0; $x < $arrlength; $x++){
+            echo $itemsInCart[$x];
+            echo "<br>";
+        }
+        ?>
         
     </body>
 </html>
