@@ -7,6 +7,9 @@ if(isset($_POST['submit'])){
 }
 
 $arrlength = count($itemsInCart);
+var_dump($itemsInCart);
+echo "<br>";
+var_dump($arrlength);
 
 ?>
 
