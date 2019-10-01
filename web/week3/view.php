@@ -1,11 +1,7 @@
 <?php
 
 if(isset($_POST['submit'])){
-    var_dump($_POST['addedItems']);
-    foreach ($_POST['addedItems'] as $select){
-        echo $select;
-        $itemsInCart = array($select);
-    }
+    $itemsInCart = $_POST['addedItems'];
 }
 
 $arrlength = count($itemsInCart);
