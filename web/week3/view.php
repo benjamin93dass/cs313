@@ -1,18 +1,13 @@
 <?php
-echo "reading 1";
+
 if(isset($_POST['submit'])){
-    echo "reading 2";
     foreach ($_POST['addedItems'] as $select){
-        echo "reading 3";
         echo $select;
         $itemsInCart = array($select);
     }
 }
 
 $arrlength = count($itemsInCart);
-var_dump($itemsInCart);
-echo "<br>";
-var_dump($arrlength);
 
 ?>
 
@@ -25,6 +20,9 @@ var_dump($arrlength);
     </head>
     <body>
         <h1>Items in cart:</h1><br> 
+        <?php
+        var_dump($itemsInCart);
+        ?>
         
     </body>
 </html>
