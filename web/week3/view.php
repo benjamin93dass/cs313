@@ -1,5 +1,5 @@
 <?php
-echo "reading 1";
+/*echo "reading 1";
 if(isset($_POST['submit'])){
     echo "reading 2";
     foreach ($_POST['addedItems'] as $select){
@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 $arrlength = count($itemsInCart);
 var_dump($itemsInCart);
 echo "<br>";
-var_dump($arrlength);
+var_dump($arrlength);*/
 
 ?>
 
