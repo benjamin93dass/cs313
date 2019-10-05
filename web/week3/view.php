@@ -7,7 +7,7 @@
         <title>Browse</title>
         <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700%7CRoboto%7CJosefin+Sans:100,300,400,500" rel="stylesheet" type="text/css">
-        
+        <link rel="stylesheet" href="style-1.css">
         <script>
             function deleteItems() {
                 $('input[type=checkbox]').each(function () {

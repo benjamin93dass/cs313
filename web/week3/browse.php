@@ -14,14 +14,11 @@
                 $.ajax({
                     url: 'session.php',
                     type: 'POST',
-                    // async: false,
                     data: {
                         itemName: itemName,
                         price: price,
                     }
-                }).done(function(data){
-                // alert(data);
-                });
+                }).done(function(data){});
             }
         </script>
     </head>
