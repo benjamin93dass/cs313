@@ -41,7 +41,7 @@ $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
 
         <!-- Sidebar -->
         <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Start Bootstrap </div>
+            <div class="sidebar-heading">Menu</div>
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
@@ -82,10 +82,6 @@ $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
                 <br>
                 
                 <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
                 <?php
                 $temp_deb_bal;
