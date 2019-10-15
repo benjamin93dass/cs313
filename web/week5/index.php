@@ -63,7 +63,7 @@ $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
 
       <div class="container-fluid">
           <header>
-              <h1 style="color: white;">Summary of accounts</h1>
+              <h1>Summary of accounts</h1>
           </header>
 
           <?php
