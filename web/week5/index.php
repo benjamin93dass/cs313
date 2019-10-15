@@ -1,10 +1,10 @@
 <?php
-require('dbconnect.php');
-$db = get_db();
-$query = 'SELECT debit_balance, available_credit, credit_balance, name FROM bank_account';
-$stmt = $db->prepare($query);
-$stmt->execute();
-$bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  require('dbconnect.php');
+  $db = get_db();
+  $query = 'SELECT debit_balance, available_credit, credit_balance, name FROM bank_account';
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+    $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
