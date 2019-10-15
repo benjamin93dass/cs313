@@ -12,78 +12,64 @@ $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
 
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <title>Accounts</title>
+  <title>Accounts</title>
 
-    <!-- Bootstrap core CSS -->
+  <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Custom styles for this template -->
-<link href="css/simple-sidebar.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
 
-     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+
 </head>
 
 <body>
 
-    <div class="d-flex" id="wrapper">
+  <div class="d-flex" id="wrapper">
 
-        <!-- Sidebar -->
-        <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Menu</div>
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Accounts and Settings
-                    </a>
-                </li>
-                 <li>
-                    <a href="index.php">Summary of Accounts</a>
-                </li>
-                <li>
-                    <a href="account1.php">Account 1</a>
-                </li>
-                <li>
-                    <a href="account2.php">Account 2</a>
-                </li>
-                <li>
-                    <a href="account3.php">Account 3</a>
-                </li>
-                <li>
-                    <a href="settings.php">Settings</a>
-                </li>
-                <li>
-                    <a href="faq.php">FAQ</a>
-                </li>
-                <li>
-                    <a href="help.php">Help</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Menu</div>
+      <div class="list-group list-group-flush">
+        <a href="index.php" class="list-group-item list-group-item-action bg-light">Summary of Accounts</a>
+        <a href="account1.php" class="list-group-item list-group-item-action bg-light">Account 1</a>
+        <a href="account2.php" class="list-group-item list-group-item-action bg-light">Account 2</a>
+        <a href="account3.php" class="list-group-item list-group-item-action bg-light">Account 3</a>
+        <a href="settings.php" class="list-group-item list-group-item-action bg-light">Settings</a>
+        <a href="help.php" class="list-group-item list-group-item-action bg-light">Help</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
 
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <header>
-                    <h1 style="color: white;">Summary of accounts</h1>
-                </header>
-                <br>
-                
-                <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
 
-                <?php
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+
+      <div class="container-fluid">
+          <header>
+              <h1 style="color: white;">Summary of accounts</h1>
+          </header>
+
+          <?php
                 $temp_deb_bal;
                 $temp_aval_cre;
                 $temp_cre_bal;
@@ -128,25 +114,24 @@ $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
                     $x++;
                 }
                 ?>
-                
-            </div>
-        </div>
-        <!-- /#page-content-wrapper -->
-
+      </div>
     </div>
-    <!-- /#wrapper -->
+    <!-- /#page-content-wrapper -->
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </div>
+  <!-- /#wrapper -->
 
-    <!-- Menu Toggle Script -->
-    <script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
     $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
     });
-    </script>
+  </script>
 
 </body>
 
