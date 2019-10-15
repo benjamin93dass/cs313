@@ -20,10 +20,10 @@ $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
     <title>Accounts</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="css/simple-sidebar.css" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="css/simple-sidebar.css" rel="stylesheet">
 
      <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,10 +37,11 @@ $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
 
 <body>
 
-    <div id="wrapper">
+    <div class="d-flex" id="wrapper">
 
         <!-- Sidebar -->
-        <div id="sidebar-wrapper">
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Start Bootstrap </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
@@ -79,7 +80,12 @@ $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
                     <h1 style="color: white;">Summary of accounts</h1>
                 </header>
                 <br>
-                <a href="#menu-toggle" class="btn btn-secondary col-md-4 col-md-offset-4" id="menu-toggle">Menu</a>
+                
+                <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <?php
                 $temp_deb_bal;
@@ -135,8 +141,8 @@ $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
     <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
-    <script src="jquery/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <script>
