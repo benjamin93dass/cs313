@@ -38,7 +38,7 @@
           </div>
           <div class="col-md-6 col-sm-6">
             <div class="info-right">
-              <button class="well col-md-12" onclick="window.location.href='week5/index.php'>Bank ledgers</button>
+              <button class="well col-md-12" onclick="window.location.href='week5/index.php'">Bank ledgers</button>
             </div>
           </div>
         </div>
