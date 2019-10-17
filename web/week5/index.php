@@ -37,10 +37,10 @@
 
 <body>
 
-  <div class="d-flex" id="wrapper">
+  <div class="d-flex" id="wrapper"  class="toggled">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper" class="toggled">
+    <div class="bg-light border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Menu</div>
       <div class="list-group list-group-flush">
         <a href="index.php" class="list-group-item list-group-item-action bg-light">Summary of Accounts</a>
