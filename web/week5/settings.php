@@ -28,7 +28,7 @@
 
 <body>
 
-  <div class="d-flex" id="wrapper">
+  <div id="wrapper">
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
