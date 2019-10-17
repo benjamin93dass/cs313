@@ -77,7 +77,7 @@
       <!-- Image and text -->
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="menu.scg" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" alt="">
         Bootstrap
       </a>
     </nav>
