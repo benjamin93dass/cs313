@@ -40,7 +40,7 @@
   <div class="d-flex toggled" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+    <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
