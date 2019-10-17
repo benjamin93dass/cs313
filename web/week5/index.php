@@ -70,17 +70,17 @@
     <!-- /#sidebar-wrapper -->
     
       <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="menu.svg" width="40" height="40" class="d-inline-block align-top" id="menu-toggle">
-        Bootstrap
-      </a>
-    </nav>
+    
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
 
-      
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
+        <h1>Account manager</h1>
+      </a>
+    </nav>
 
       <div class="container-fluid">
           <h1>Summary of accounts</h1>
