@@ -50,9 +50,7 @@
             </nav>
             
             <div class="container-fluid">
-                <header>
-                    <h1 style="color: white;">Account 1</h1>
-                </header>
+                <h1 style="color: white;">Account 1</h1>
                 <br>
                 <a href="#menu-toggle" class="btn btn-secondary col-md-4 col-md-offset-4" id="menu-toggle">Menu</a>
                 <br><br>

@@ -62,7 +62,7 @@
       </nav>
 
       <div class="container-fluid">
-              <h1>Summary of accounts</h1>
+          <h1>Summary of accounts</h1>
 
           <?php
                 $temp_deb_bal;
