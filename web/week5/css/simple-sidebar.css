@@ -26,20 +26,20 @@ body {
   width: 15rem;
 }
 
-.sidebar-nav a {
+.sidebar-wrapper a {
   display: block;
   text-decoration: none;
   color: #999999;
 }
 
-.sidebar-nav a:hover {
+.sidebar-wrapper a:hover {
   text-decoration: none;
   color: #fff;
   background: rgba(255,255,255,0.2);
 }
 
-.sidebar-nav a:active,
-.sidebar-nav a:focus {
+.sidebar-wrapper a:active,
+.sidebar-wrapper a:focus {
   text-decoration: none;
 }
 
