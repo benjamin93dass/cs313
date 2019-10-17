@@ -4,7 +4,7 @@
   $query = 'SELECT debit_balance, available_credit, credit_balance, name FROM bank_account';
   $stmt = $db->prepare($query);
   $stmt->execute();
-    $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -62,9 +62,7 @@
       </nav>
 
       <div class="container-fluid">
-          <header>
               <h1>Summary of accounts</h1>
-          </header>
 
           <?php
                 $temp_deb_bal;
