@@ -74,15 +74,11 @@
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-
-    <nav class="">
+      <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
         <h1>Account manager</h1>
       </a>
-    </nav>
-
-      <div class="container-fluid">
           <h1>Summary of accounts</h1>
 
           <?php
