@@ -69,13 +69,15 @@
     </div>
     <!-- /#sidebar-wrapper -->
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
 
       </nav>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+
+      
 
       <div class="container-fluid">
           <h1>Summary of accounts</h1>
