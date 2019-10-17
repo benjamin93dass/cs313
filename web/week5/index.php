@@ -68,16 +68,11 @@
             </ul>
     </div>
     <!-- /#sidebar-wrapper -->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-
-      </nav>
     
       <!-- Image and text -->
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="menu.svg" width="40" height="40" class="d-inline-block align-top" id="menu-toggle">
         Bootstrap
       </a>
     </nav>
