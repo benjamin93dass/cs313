@@ -37,7 +37,7 @@
 
 <body>
 
-  <div class="d-flex" id="wrapper"  class="toggled">
+  <div id="wrapper" class="toggled">
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
