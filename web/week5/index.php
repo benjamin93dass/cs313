@@ -73,6 +73,14 @@
         <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
 
       </nav>
+    
+      <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light">
+      <a class="navbar-brand" href="#">
+        <img src="menu.scg" width="30" height="30" class="d-inline-block align-top" alt="">
+        Bootstrap
+      </a>
+    </nav>
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
