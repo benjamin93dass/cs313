@@ -41,15 +41,31 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Menu</div>
-      <div class="list-group list-group-flush">
-        <a href="index.php" class="list-group-item list-group-item-action bg-light">Summary of Accounts</a>
-        <a href="account1.php" class="list-group-item list-group-item-action bg-light">Account 1</a>
-        <a href="account2.php" class="list-group-item list-group-item-action bg-light">Account 2</a>
-        <a href="account3.php" class="list-group-item list-group-item-action bg-light">Account 3</a>
-        <a href="settings.php" class="list-group-item list-group-item-action bg-light">Settings</a>
-        <a href="help.php" class="list-group-item list-group-item-action bg-light">Help</a>
-      </div>
+      <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Menu
+                    </a>
+                </li>
+                <li>
+                  <a href="index.php" class="list-group-item list-group-item-action bg-light">Summary of Accounts</a>
+                </li>
+                <li>
+                  <a href="account1.php" class="list-group-item list-group-item-action bg-light">Account 1</a>
+                </li>
+                <li>
+                  <a href="account2.php" class="list-group-item list-group-item-action bg-light">Account 2</a>
+                </li>
+                <li>
+                  <a href="account3.php" class="list-group-item list-group-item-action bg-light">Account 3</a>
+                </li>
+                <li>
+                  <a href="settings.php" class="list-group-item list-group-item-action bg-light">Settings</a>
+                </li>
+                <li>
+                  <a href="help.php" class="list-group-item list-group-item-action bg-light">Help</a>
+                </li>
+            </ul>
     </div>
     <!-- /#sidebar-wrapper -->
 

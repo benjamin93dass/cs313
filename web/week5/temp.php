@@ -1,134 +1,149 @@
-<?php
-require('dbconnect.php');
-$db = get_db();
-$query = 'SELECT debit_balance, available_credit, credit_balance, name FROM bank_account';
-$stmt = $db->prepare($query);
-$stmt->execute();
-$bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-?>
+<div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
-<!DOCTYPE html>
-<html lang="en">
+        #wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
 
-<head>
+#wrapper.toggled {
+    padding-left: 250px;
+}
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
 
-  <title>Accounts</title>
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
 
-  <!-- Custom styles for this template -->
-  <link href="css/simple-sidebar.css" rel="stylesheet">
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+/* Sidebar Styles */
 
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
 
-</head>
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
 
-<body>
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
 
-  <div class="d-flex" id="wrapper">
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
 
-    <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Menu</div>
-      <div class="list-group list-group-flush">
-        <a href="index.php" class="list-group-item list-group-item-action bg-light">Summary of Accounts</a>
-        <a href="account1.php" class="list-group-item list-group-item-action bg-light">Account 1</a>
-        <a href="account2.php" class="list-group-item list-group-item-action bg-light">Account 2</a>
-        <a href="account3.php" class="list-group-item list-group-item-action bg-light">Account 3</a>
-        <a href="settings.php" class="list-group-item list-group-item-action bg-light">Settings</a>
-        <a href="help.php" class="list-group-item list-group-item-action bg-light">Help</a>
-      </div>
-    </div>
-    <!-- /#sidebar-wrapper -->
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
 
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-      </nav>
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
 
-      <div class="container-fluid">
-          <header>
-              <h1>Summary of accounts</h1>
-          </header>
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
 
-          <?php
-                $temp_deb_bal;
-                $temp_aval_cre;
-                $temp_cre_bal;
-                $total_deb_bal;
-                $total_aval_cre;
-                $total_cre_bal;
-                foreach ($bank_infos as $bank_info) {
-                    $id = $bank_info['name'];
-                    if ($id == 1) {
-                        global $temp_deb_bal, $temp_aval_cre, $temp_cre_bal, $total_deb_bal, $total_aval_cre, $total_cre_bal;
-                        $temp_deb_bal = $bank_info['debit_balance'];
-                        $total_deb_bal += $temp_deb_bal;
-                        $temp_aval_cre = $bank_info['available_credit'];
-                        $total_aval_cre += $temp_aval_cre;
-                        $temp_cre_bal = $bank_info['credit_balance'];
-                        $total_cre_bal += $temp_cre_bal;
-                    }
-                }
-                echo "<br><br>";
-                echo "<h3>Total Debit</h3>";
-                echo "<a href=\"\"><sup>View ledger</sup></a>";
-                echo "<p><pre>   Total balance: $total_deb_bal</pre><p>";
-                echo "<br>";
-                echo "<h3>Total Credit</h3>";
-                echo "<a href=\"\"><sup>View ledger</sup></a>";
-                echo "<p><pre>   Total available credit: $total_aval_cre</pre></p>";
-                echo "<p><pre>   Total Balance: $total_cre_bal</pre></p>";
-                echo "<br>";
-                $x = 1;
-                foreach ($bank_infos as $bank_info) {
-                    $deb_bal = $bank_info['debit_balance'];
-                    $aval_cre = $bank_info['available_credit'];
-                    $cre_bal = $bank_info['credit_balance'];
-                    $id = $bank_info['name'];
-                    if ($id == 1) {
-                        echo "<h5><i>Account $x Summary</i></h5>";
-                        echo "<p><pre>   Debit Balance: " . $deb_bal . "</pre></p>";
-                        echo "<p><pre>   Available credit: " . $aval_cre . "</pre></p>";
-                        echo "<p><pre>   Credit Balance: " . $cre_bal . "</pre></p>";
-                        echo "<br>";
-                    }
-                    $x++;
-                }
-                ?>
-      </div>
-    </div>
-    <!-- /#page-content-wrapper -->
+    #wrapper.toggled {
+        padding-left: 0;
+    }
 
-  </div>
-  <!-- /#wrapper -->
+    #sidebar-wrapper {
+        width: 250px;
+    }
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
 
-  <!-- Menu Toggle Script -->
-  <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-  </script>
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
 
-</body>
-
-</html>
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
