@@ -43,27 +43,27 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#"style="background: black;">
+                    <a href="#">
                         Menu
                     </a>
                 </li>
                 <li>
-                  <a href="index.php" class="list-group-item list-group-item-action bg-light">Summary of Accounts</a>
+                  <a href="index.php">Summary of Accounts</a>
                 </li>
                 <li>
-                  <a href="account1.php" class="list-group-item list-group-item-action bg-light">Account 1</a>
+                  <a href="account1.php">Account 1</a>
                 </li>
                 <li>
-                  <a href="account2.php" class="list-group-item list-group-item-action bg-light">Account 2</a>
+                  <a href="account2.php">Account 2</a>
                 </li>
                 <li>
-                  <a href="account3.php" class="list-group-item list-group-item-action bg-light">Account 3</a>
+                  <a href="account3.php">Account 3</a>
                 </li>
                 <li>
-                  <a href="settings.php" class="list-group-item list-group-item-action bg-light">Settings</a>
+                  <a href="settings.php">Settings</a>
                 </li>
                 <li>
-                  <a href="help.php" class="list-group-item list-group-item-action bg-light">Help</a>
+                  <a href="help.php">Help</a>
                 </li>
             </ul>
     </div>
