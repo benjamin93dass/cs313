@@ -77,7 +77,7 @@
 
     <nav class="navbar navbar-light bg-light">
       <a class="navbar-brand" href="#">
-        <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
+        <img src="menu.svg" width="35" height="35" class="" id="menu-toggle">
         <h1>Account manager</h1>
       </a>
     </nav>
