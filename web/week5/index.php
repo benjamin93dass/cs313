@@ -97,20 +97,20 @@
                 </li>
             </ul>
     </div>
-    <!-- /#sidebar-wrapper -->
-    
-      <!-- Image and text -->
-    
+    <!-- /#sidebar-wrapper -->    
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
       <div class="container-fluid">
-      
-      <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
+      <span>
+        <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
+        <?php echo "<h2 style='display:inline'>Welcome $current_user!</h2>";?>
+      </span>
+     
     
       <?php
         // Welcoming current user
-        echo "<h2>Welcome $current_user!</h2><br>";
+        
         echo "<h3>Account summaries</h3>";
 
         // Displaying total balances
