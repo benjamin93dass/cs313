@@ -131,8 +131,11 @@
         $query = 'SELECT * FROM person';
         $stmt = $db->prepare($query);
         $stmt->execute();
-        $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo "Welcome user!";
+        $person_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($person_names as $person_name) {
+          $current_user = $person_name['person_name'];
+        }
+        echo "Welcome $current_user!";
       ?>
 
       </div>
