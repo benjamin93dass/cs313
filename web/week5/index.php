@@ -106,12 +106,12 @@
     <div id="page-content-wrapper">
       <div class="container-fluid">
       
-      <a class="navbar-brand" href="#">
-        <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
-        <?php echo "Welcome $current_user!";?>
-      </a>
+      <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
     
       <?php
+        // Welcoming current user
+        echo "Welcome $current_user!";
+
         // Displaying total balances
         echo "<br><br>";
         echo "<h3>Total Debit</h3>";
