@@ -49,7 +49,7 @@
 
 <body>
 
-  <div class="d-flex" id="wrapper">
+  <div class="d-flex toggled" id="wrapper">
 
     <!-- Sidebar -->
     <div id="sidebar-wrapper">
