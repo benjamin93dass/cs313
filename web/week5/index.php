@@ -81,6 +81,12 @@
         <h1>Account manager</h1>
       </a>-->
       <?php
+        require('dbconnect.php');
+        $db = get_db();
+        $query = 'SELECT * FROM person';
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+        $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo "Welcome user!";
       ?>
           <h1>Summary of accounts</h1>
