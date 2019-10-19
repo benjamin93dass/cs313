@@ -23,8 +23,6 @@
   }
 
   // Requesting person_table information
-  //require('dbconnect.php');
-  //$db = get_db();
   $query = 'SELECT * FROM person';
   $stmt = $db->prepare($query);
   $stmt->execute();
@@ -34,7 +32,13 @@
   }
 
   // Requesting username_table information
-
+  $query = 'SELECT * FROM username';
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+  $usernames = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  foreach ($usernames as $username) {
+    $current_username = $username['username'];
+  }
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +78,7 @@
       <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Menu
+                        <?php echo"Current user:$current_username"?>
                     </a>
                 </li>
                 <li>
