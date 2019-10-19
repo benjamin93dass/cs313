@@ -81,7 +81,7 @@
         <h1>Account manager</h1>
       </a>-->
       <?php
-        require('dbconnect.php');
+        //require('dbconnect.php');
         $db = get_db();
         $query = 'SELECT * FROM person';
         $stmt = $db->prepare($query);
