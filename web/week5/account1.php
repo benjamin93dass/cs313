@@ -31,18 +31,32 @@
   <div class="d-flex" id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Menu</div>
-      <div class="list-group list-group-flush">
-        <a href="index.php" class="list-group-item list-group-item-action bg-light">Summary of Accounts</a>
-        <a href="account1.php" class="list-group-item list-group-item-action bg-light">Account 1</a>
-        <a href="account2.php" class="list-group-item list-group-item-action bg-light">Account 2</a>
-        <a href="account3.php" class="list-group-item list-group-item-action bg-light">Account 3</a>
-        <a href="settings.php" class="list-group-item list-group-item-action bg-light">Settings</a>
-        <a href="help.php" class="list-group-item list-group-item-action bg-light">Help</a>
-      </div>
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                <?php echo "<span style='display:inline;color:#CCCC99'><i>Current user: </i><b> $current_username </b></span>" ?>
+                </li>
+                <li>
+                  <a href="index.php">Summary of Accounts</a>
+                </li>
+                <li>
+                  <a href="account1.php">Account 1</a>
+                </li>
+                <li>
+                  <a href="account2.php">Account 2</a>
+                </li>
+                <li>
+                  <a href="account3.php">Account 3</a>
+                </li>
+                <li>
+                  <a href="settings.php">Settings</a>
+                </li>
+                <li>
+                  <a href="help.php">Help</a>
+                </li>
+            </ul>
     </div>
-    <!-- /#sidebar-wrapper -->
+    <!-- /#sidebar-wrapper --> 
         <!-- Page Content -->
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
