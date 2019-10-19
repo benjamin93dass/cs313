@@ -104,7 +104,7 @@
       <div class="container-fluid">
       <span>
         <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
-        <?php echo "<h2 style='display:inline'>Welcome $current_user!</h2>";?>
+        <?php echo "<h3 style='display:inline'>   Welcome $current_user!</h3>";?>
       </span>
      
     
