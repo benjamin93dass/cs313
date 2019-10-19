@@ -6,24 +6,19 @@
   $stmt->execute();
   $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $temp_deb_bal;
-                $temp_aval_cre;
-                $temp_cre_bal;
-                $total_deb_bal;
-                $total_aval_cre;
-                $total_cre_bal;
-                foreach ($bank_infos as $bank_info) {
-                    $id = $bank_info['name'];
-                    if ($id == 1) {
-                        global $temp_deb_bal, $temp_aval_cre, $temp_cre_bal, $total_deb_bal, $total_aval_cre, $total_cre_bal;
-                        $temp_deb_bal = $bank_info['debit_balance'];
-                        $total_deb_bal += $temp_deb_bal;
-                        $temp_aval_cre = $bank_info['available_credit'];
-                        $total_aval_cre += $temp_aval_cre;
-                        $temp_cre_bal = $bank_info['credit_balance'];
-                        $total_cre_bal += $temp_cre_bal;
-                    }
-                }
+  $temp_deb_bal, $temp_aval_cre, $temp_cre_bal, $total_deb_bal, $total_aval_cre, $total_cre_bal;
+  foreach ($bank_infos as $bank_info) {
+    $id = $bank_info['name'];
+    if ($id == 1) {
+      global $temp_deb_bal, $temp_aval_cre, $temp_cre_bal, $total_deb_bal, $total_aval_cre, $total_cre_bal;
+      $temp_deb_bal = $bank_info['debit_balance'];
+      $total_deb_bal += $temp_deb_bal;
+      $temp_aval_cre = $bank_info['available_credit'];
+      $total_aval_cre += $temp_aval_cre;
+      $temp_cre_bal = $bank_info['credit_balance'];
+      $total_cre_bal += $temp_cre_bal;
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -95,10 +90,10 @@
     <div id="page-content-wrapper">
       <div class="container-fluid">
       
-      <!--<a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="#">
         <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
-        <h1>Account manager</h1>
-      </a>-->
+        <!--<h1>Account manager</h1>-->
+      </a>
       
           <h1>Summary of accounts</h1>
 
