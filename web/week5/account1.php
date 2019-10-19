@@ -8,6 +8,15 @@
   foreach ($usernames as $username) {
     $current_username = $username['username'];
   }
+
+  // Requesting person_table information
+  $query = 'SELECT * FROM person';
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+  $person_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  foreach ($person_names as $person_name) {
+    $current_user = $person_name['person_name'];
+  }
 ?>
 
 <!DOCTYPE html>
