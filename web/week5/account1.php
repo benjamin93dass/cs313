@@ -8,7 +8,7 @@
   foreach ($usernames as $username) {
     $current_username = $username['username'];
   }
-
+  
   // Requesting person_table information
   $query = 'SELECT * FROM person';
   $stmt = $db->prepare($query);
@@ -70,23 +70,21 @@
       <div class="container-fluid">
         <span>
           <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
-          <?php echo "<h3 style='display:inline'></h3>$current_user, this is Account 1</h3><hr>";?>
+          <?php echo "<h3 style='display:inline'>$current_user, this is Account 1</h3><hr>";?>
         </span>
-            
-        <div class="container-fluid">
-          <h3><b>Debit</b></h3>
-          <a href="#"><sup>View ledger</sup></a>
-          <p><pre>   Balance: <input type="number" name=""></pre></p>
-          <br><br><br>
-          <h3><b>Credit</b></h3>
-          <a href="#"><sup>View ledger</sup></a>
-          <p><pre>   Available credit: <input type="number" name=""></pre></p>
-          <br>
-          <p><pre>   Balance:          <input type="number" name=""></pre></p>
-          <br><br><br>
-          <button>Update</button>
-          <br><br>
-        </div>
+
+        <h3><b>Debit</b></h3>
+        <a href="#"><sup>View ledger</sup></a>
+        <p><pre>   Balance: <input type="number" name=""></pre></p>
+        <br><br><br>
+        <h3><b>Credit</b></h3>
+        <a href="#"><sup>View ledger</sup></a>
+        <p><pre>   Available credit: <input type="number" name=""></pre></p>
+        <br>
+        <p><pre>   Balance:          <input type="number" name=""></pre></p>
+        <br><br><br>
+        <button>Update</button>
+        <br><br>
       </div>
       <!-- page-content-wrapper -->
     </div>
