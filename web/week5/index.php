@@ -1,4 +1,5 @@
 <?php
+  // Requesting table information
   require('dbconnect.php');
   $db = get_db();
   $query = 'SELECT debit_balance, available_credit, credit_balance, name FROM bank_account';
@@ -6,6 +7,7 @@
   $stmt->execute();
   $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+  // Fetching and calculating total balances
   $temp_deb_bal = $temp_aval_cre = $temp_cre_bal = $total_deb_bal = $total_aval_cre = $total_cre_bal = 0;
   foreach ($bank_infos as $bank_info) {
     $id = $bank_info['name'];
@@ -92,40 +94,41 @@
       
       <a class="navbar-brand" href="#">
         <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
-        <!--<h1>Account manager</h1>-->
+        <h1>Summary of accounts</h1>
       </a>
-      
-          <h1>Summary of accounts</h1>
+    
+      <?php
 
-          <?php
-                
-                echo "<br><br>";
-                echo "<h3>Total Debit</h3>";
-                echo "<a href=\"\"><sup>View ledger</sup></a>";
-                echo "<p><pre>   Total balance: $total_deb_bal</pre><p>";
+        // Displaying total balances
+        echo "<br><br>";
+        echo "<h3>Total Debit</h3>";
+        echo "<a href=\"\"><sup>View ledger</sup></a>";
+        echo "<p><pre>   Total balance: $total_deb_bal</pre><p>";
+        echo "<br>";
+        echo "<h3>Total Credit</h3>";
+        echo "<a href=\"\"><sup>View ledger</sup></a>";
+        echo "<p><pre>   Total available credit: $total_aval_cre</pre></p>";
+        echo "<p><pre>   Total Balance: $total_cre_bal</pre></p>";
+        echo "<br>";
+        
+        // Displaying summary of accounts
+        $x = 1;
+        foreach ($bank_infos as $bank_info) {
+            $deb_bal = $bank_info['debit_balance'];
+            $aval_cre = $bank_info['available_credit'];
+            $cre_bal = $bank_info['credit_balance'];
+            $id = $bank_info['name'];
+            if ($id == 1) {
+                echo "<h5><i>Account $x Summary</i></h5>";
+                echo "<p><pre>   Debit Balance: " . $deb_bal . "</pre></p>";
+                echo "<p><pre>   Available credit: " . $aval_cre . "</pre></p>";
+                echo "<p><pre>   Credit Balance: " . $cre_bal . "</pre></p>";
                 echo "<br>";
-                echo "<h3>Total Credit</h3>";
-                echo "<a href=\"\"><sup>View ledger</sup></a>";
-                echo "<p><pre>   Total available credit: $total_aval_cre</pre></p>";
-                echo "<p><pre>   Total Balance: $total_cre_bal</pre></p>";
-                echo "<br>";
-                $x = 1;
-                foreach ($bank_infos as $bank_info) {
-                    $deb_bal = $bank_info['debit_balance'];
-                    $aval_cre = $bank_info['available_credit'];
-                    $cre_bal = $bank_info['credit_balance'];
-                    $id = $bank_info['name'];
-                    if ($id == 1) {
-                        echo "<h5><i>Account $x Summary</i></h5>";
-                        echo "<p><pre>   Debit Balance: " . $deb_bal . "</pre></p>";
-                        echo "<p><pre>   Available credit: " . $aval_cre . "</pre></p>";
-                        echo "<p><pre>   Credit Balance: " . $cre_bal . "</pre></p>";
-                        echo "<br>";
-                    }
-                    $x++;
-                }
-                ?>
-      </div>
+            }
+            $x++;
+        }
+      ?>
+      
       <?php
         //require('dbconnect.php');
         $db = get_db();
@@ -135,6 +138,8 @@
         $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo "Welcome user!";
       ?>
+
+      </div>
     </div>
     <!-- /#page-content-wrapper -->
 
