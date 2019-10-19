@@ -24,14 +24,14 @@
 
   // Requesting person_table information
   //require('dbconnect.php');
-        //$db = get_db();
-        $query = 'SELECT * FROM person';
-        $stmt = $db->prepare($query);
-        $stmt->execute();
-        $person_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($person_names as $person_name) {
-          $current_user = $person_name['person_name'];
-        }
+  //$db = get_db();
+  $query = 'SELECT * FROM person';
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+  $person_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  foreach ($person_names as $person_name) {
+    $current_user = $person_name['person_name'];
+  }
 
   // Requesting username_table information
 
@@ -108,6 +108,7 @@
       
       <a class="navbar-brand" href="#">
         <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
+        <?php echo "Welcome $current_user!";?>
       </a>
     
       <?php
@@ -138,10 +139,7 @@
                 echo "<br>";
             }
             $x++;
-        }
-
-        
-        echo "Welcome $current_user!";
+        } 
       ?>
 
       </div>
