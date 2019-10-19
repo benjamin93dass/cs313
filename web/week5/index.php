@@ -6,7 +6,7 @@
   $stmt->execute();
   $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-  $temp_deb_bal, $temp_aval_cre, $temp_cre_bal, $total_deb_bal, $total_aval_cre, $total_cre_bal;
+  $temp_deb_bal = $temp_aval_cre = $temp_cre_bal = $total_deb_bal = $total_aval_cre = $total_cre_bal = 0;
   foreach ($bank_infos as $bank_info) {
     $id = $bank_info['name'];
     if ($id == 1) {
