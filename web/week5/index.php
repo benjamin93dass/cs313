@@ -110,7 +110,7 @@
     
       <?php
         // Welcoming current user
-        echo "Welcome $current_user!";
+        echo "<br><h1>Welcome $current_user!</h1>";
 
         // Displaying total balances
         echo "<br><br>";
