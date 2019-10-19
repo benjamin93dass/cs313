@@ -103,15 +103,15 @@
     <div id="page-content-wrapper">
       <div class="container-fluid">
       <span>
-        <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
-        <?php echo "<h3 style='display:inline'>   Welcome $current_user!</h3>";?>
+        <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
+        <?php echo "<h3 style='display:inline'>Welcome $current_user!</h3>";?>
       </span>
      
     
       <?php
         // Welcoming current user
         
-        echo "<h3>Account summaries</h3>";
+        echo "<hr><h3>Account summaries</h3>";
 
         // Displaying total balances
         echo "<br><br>";
