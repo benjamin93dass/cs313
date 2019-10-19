@@ -76,10 +76,13 @@
     <div id="page-content-wrapper">
       <div class="container-fluid">
       
-      <a class="navbar-brand" href="#">
+      <!--<a class="navbar-brand" href="#">
         <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
         <h1>Account manager</h1>
-      </a>
+      </a>-->
+      <?php
+        echo "Welcome user!";
+      ?>
           <h1>Summary of accounts</h1>
 
           <?php
