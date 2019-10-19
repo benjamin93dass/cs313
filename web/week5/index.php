@@ -5,6 +5,25 @@
   $stmt = $db->prepare($query);
   $stmt->execute();
   $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  $temp_deb_bal;
+                $temp_aval_cre;
+                $temp_cre_bal;
+                $total_deb_bal;
+                $total_aval_cre;
+                $total_cre_bal;
+                foreach ($bank_infos as $bank_info) {
+                    $id = $bank_info['name'];
+                    if ($id == 1) {
+                        global $temp_deb_bal, $temp_aval_cre, $temp_cre_bal, $total_deb_bal, $total_aval_cre, $total_cre_bal;
+                        $temp_deb_bal = $bank_info['debit_balance'];
+                        $total_deb_bal += $temp_deb_bal;
+                        $temp_aval_cre = $bank_info['available_credit'];
+                        $total_aval_cre += $temp_aval_cre;
+                        $temp_cre_bal = $bank_info['credit_balance'];
+                        $total_cre_bal += $temp_cre_bal;
+                    }
+                }
 ?>
 
 <!DOCTYPE html>
@@ -84,24 +103,7 @@
           <h1>Summary of accounts</h1>
 
           <?php
-                $temp_deb_bal;
-                $temp_aval_cre;
-                $temp_cre_bal;
-                $total_deb_bal;
-                $total_aval_cre;
-                $total_cre_bal;
-                foreach ($bank_infos as $bank_info) {
-                    $id = $bank_info['name'];
-                    if ($id == 1) {
-                        global $temp_deb_bal, $temp_aval_cre, $temp_cre_bal, $total_deb_bal, $total_aval_cre, $total_cre_bal;
-                        $temp_deb_bal = $bank_info['debit_balance'];
-                        $total_deb_bal += $temp_deb_bal;
-                        $temp_aval_cre = $bank_info['available_credit'];
-                        $total_aval_cre += $temp_aval_cre;
-                        $temp_cre_bal = $bank_info['credit_balance'];
-                        $total_cre_bal += $temp_cre_bal;
-                    }
-                }
+                
                 echo "<br><br>";
                 echo "<h3>Total Debit</h3>";
                 echo "<a href=\"\"><sup>View ledger</sup></a>";
