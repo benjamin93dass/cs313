@@ -80,15 +80,7 @@
         <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
         <h1>Account manager</h1>
       </a>-->
-      <?php
-        //require('dbconnect.php');
-        $db = get_db();
-        $query = 'SELECT * FROM person';
-        $stmt = $db->prepare($query);
-        $stmt->execute();
-        $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        echo "Welcome user!";
-      ?>
+      
           <h1>Summary of accounts</h1>
 
           <?php
@@ -137,6 +129,15 @@
                 }
                 ?>
       </div>
+      <?php
+        //require('dbconnect.php');
+        $db = get_db();
+        $query = 'SELECT * FROM person';
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+        $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo "Welcome user!";
+      ?>
     </div>
     <!-- /#page-content-wrapper -->
 
