@@ -70,7 +70,7 @@
       <div class="container-fluid">
         <span>
           <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
-          <?php echo "<h3 style='display:inline'>$current_user, how can I help you more?";?>
+          <?php echo "<h3 style='display:inline'>$current_user, how can I help you more?</h3><hr>";?>
         </span>
 
         <p>Coming soon...</p>
