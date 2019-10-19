@@ -94,11 +94,9 @@
       
       <a class="navbar-brand" href="#">
         <img src="menu.svg" width="35" height="35" class="d-inline-block align-top" id="menu-toggle">
-        <h1>Summary of accounts</h1>
       </a>
     
       <?php
-
         // Displaying total balances
         echo "<br><br>";
         echo "<h3>Total Debit</h3>";
@@ -127,9 +125,7 @@
             }
             $x++;
         }
-      ?>
-      
-      <?php
+
         //require('dbconnect.php');
         $db = get_db();
         $query = 'SELECT * FROM person';
