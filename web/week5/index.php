@@ -127,7 +127,7 @@
         }
 
         //require('dbconnect.php');
-        $db = get_db();
+        //$db = get_db();
         $query = 'SELECT * FROM person';
         $stmt = $db->prepare($query);
         $stmt->execute();
