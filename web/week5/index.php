@@ -21,6 +21,20 @@
       $total_cre_bal += $temp_cre_bal;
     }
   }
+
+  // Requesting person_table information
+  //require('dbconnect.php');
+        //$db = get_db();
+        $query = 'SELECT * FROM person';
+        $stmt = $db->prepare($query);
+        $stmt->execute();
+        $person_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        foreach ($person_names as $person_name) {
+          $current_user = $person_name['person_name'];
+        }
+
+  // Requesting username_table information
+
 ?>
 
 <!DOCTYPE html>
@@ -126,15 +140,7 @@
             $x++;
         }
 
-        //require('dbconnect.php');
-        //$db = get_db();
-        $query = 'SELECT * FROM person';
-        $stmt = $db->prepare($query);
-        $stmt->execute();
-        $person_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        foreach ($person_names as $person_name) {
-          $current_user = $person_name['person_name'];
-        }
+        
         echo "Welcome $current_user!";
       ?>
 
