@@ -111,7 +111,7 @@
       <?php
         // Welcoming current user
         echo "<h1>Welcome $current_user!</h1><br>";
-        echo "<h4>Account summaries</h4>"
+        echo "<h4>Account summaries</h4>";
 
         // Displaying total balances
         echo "<br><br>";
