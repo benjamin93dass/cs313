@@ -77,7 +77,7 @@
     <div id="sidebar-wrapper">
       <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                <?php echo "<span style='display:inline'><i>Current user: </i><b> $current_username </b></span>" ?>
+                <?php echo "<span style='display:inline;color:#CCCC99'><i>Current user: </i><b> $current_username </b></span>" ?>
                 </li>
                 <li>
                   <a href="index.php">Summary of Accounts</a>
