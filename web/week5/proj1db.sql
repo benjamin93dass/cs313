@@ -66,3 +66,7 @@ INSERT INTO bank_account
 ( bank_name, debit_balance, available_credit, credit_balance, name)
 VALUES
 ( 'Bank of America', 1355.88, 980.00, 20, 2);
+
+SELECT * FROM bank_account bc 
+JOIN person p ON bc.name = p.id
+WHERE p.person_name = 'Benjamin';

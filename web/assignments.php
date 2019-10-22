@@ -47,7 +47,7 @@
         <div class="row">
           <div class="col-md-6 col-sm-6">
             <div class="info-left">
-              <button class="well col-md-12">Coming soon</button>
+              <button class="well col-md-12" onclick="window.location.href='week5/login.php'">temp login</button>
             </div>
           </div>
           <div class="col-md-6 col-sm-6">
