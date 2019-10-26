@@ -65,7 +65,7 @@
 
     <!-- Page Content -->
     <form action="applyChanges.php" method="POST">
-      <div id="page-content-wrapper row d-flex justify-content-center">
+      <div id="page-content-wrapper justify-content-center">
         <div class="container-fluid col-md-6">
           <span>
             <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
