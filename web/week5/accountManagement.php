@@ -65,8 +65,8 @@
 
     <!-- Page Content -->
     <form action="applyChanges.php" method="POST">
-      <div id=" justify-content-center">
-        <div class="container-fluid col-md-8">
+      <div id="page-content-wrapper justify-content-center">
+        <div class="container-fluid col-xs-9 col-md-7">
           <span>
             <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
             <?php echo "<h3 style='display:inline'>$current_user, lets update some entries</h3><hr>";?>
