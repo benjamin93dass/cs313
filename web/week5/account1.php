@@ -84,7 +84,7 @@
           <br>
           <p><pre>   Balance:          <input type="number" name="creBal"></pre></p>
           <br><br><br>
-  <       <p><pre>      Bank name: <input type="text" name="bank_name">   <input type="submit" value="Update entries"> </pre></p>
+          <p><pre>      Bank name: <input type="text" name="bank_name">   <input type="submit" value="Update entries"> </pre></p>
           <br><br>
         </div>
         <!-- page-content-wrapper -->
