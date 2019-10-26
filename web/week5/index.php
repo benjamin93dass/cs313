@@ -134,8 +134,9 @@
             $aval_cre = $bank_info['available_credit'];
             $cre_bal = $bank_info['credit_balance'];
             $id = $bank_info['name'];
+            $name = $bank_info['bank_name'];
             if ($id == 1) {
-                echo "<h5><i>Account $x Summary</i></h5>";
+                echo "<h5><i>Account $name Summary</i></h5>";
                 echo "<p><pre>   Debit Balance: " . $deb_bal . "</pre></p>";
                 echo "<p><pre>   Available credit: " . $aval_cre . "</pre></p>";
                 echo "<p><pre>   Credit Balance: " . $cre_bal . "</pre></p>";
