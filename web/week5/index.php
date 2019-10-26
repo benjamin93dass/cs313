@@ -2,7 +2,7 @@
   // Requesting table information
   require('dbconnect.php');
   $db = get_db();
-  $query = 'SELECT * name FROM bank_account';
+  $query = 'SELECT * FROM bank_account';
   $stmt = $db->prepare($query);
   $stmt->execute();
   $bank_infos = $stmt->fetchAll(PDO::FETCH_ASSOC);
