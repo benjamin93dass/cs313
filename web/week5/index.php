@@ -83,13 +83,7 @@
                   <a href="index.php">Summary of Accounts</a>
                 </li>
                 <li>
-                  <a href="account1.php">Account 1</a>
-                </li>
-                <li>
-                  <a href="account2.php">Account 2</a>
-                </li>
-                <li>
-                  <a href="account3.php">Account 3</a>
+                  <a href="accountManagement.php">Account management</a>
                 </li>
                 <li>
                   <a href="settings.php">Settings</a>

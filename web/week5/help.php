@@ -56,9 +56,7 @@
       <ul class="sidebar-nav">
         <li class="sidebar-brand"><?php echo "<span style='display:inline;color:#CCCC99'><i>Current user: </i><b> $current_username </b></span>" ?></li>
         <li><a href="index.php">Summary of Accounts</a></li>
-        <li><a href="account1.php">Account 1</a></li>
-        <li><a href="account2.php">Account 2</a></li>
-        <li><a href="account3.php">Account 3</a></li>
+        <li><a href="accountManagement.php">Account management</a></li>
         <li><a href="settings.php">Settings</a></li>
         <li><a href="help.php">Help</a></li>
       </ul>
