@@ -69,23 +69,21 @@
         <div class="container-fluid">
           <span>
             <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
-            <?php echo "<h3 style='display:inline'>$current_user, lets update some entries.</h3><hr>";?>
+            <?php echo "<h3 style='display:inline'>$current_user, lets update some entries</h3><hr>";?>
           </span>
 
-          <div class="col-md-offset-4">
           <h3><b>Debit</b></h3>
           <a href="#"><sup>View ledger</sup></a>
-          <p><pre class="col-md-4 col-md-offset-1">   Balance: <input type="number" name="debBal"></pre></p>
+          <p><pre>   Balance: <input type="number" name="debBal"></pre></p>
           <br><br><br>
           <h3><b>Credit</b></h3>
           <a href="#"><sup>View ledger</sup></a>
-          <p><pre class="col-md-4 col-md-offset-1">   Available credit: <input type="number" name="avalCre"></pre></p>
+          <p><pre>   Available credit: <input type="number" name="avalCre"></pre></p>
           <br>
-          <p><pre class="col-md-4 col-md-offset-1">   Balance:          <input type="number" name="creBal"></pre></p>
+          <p><pre>   Balance:          <input type="number" name="creBal"></pre></p>
           <br><br><br>
-          <p><pre class="col-md-6">      Bank name: <input type="text" name="bank_name">   <input type="submit" value="Update entries"> </pre></p>
+          <p><pre>      Bank name: <input type="text" name="bank_name">   <input type="submit" value="Update entries"> </pre></p>
           <br><br>
-          </div>
         </div>
         <!-- page-content-wrapper -->
       </div>
