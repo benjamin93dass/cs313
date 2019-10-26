@@ -66,28 +66,30 @@
     <!-- /#sidebar-wrapper --> 
 
     <!-- Page Content -->
-    <div id="page-content-wrapper">
-      <div class="container-fluid">
-        <span>
-          <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
-          <?php echo "<h3 style='display:inline'>$current_user, this is Account 1</h3><hr>";?>
-        </span>
+    <form action="applyChanges.php" method="POST">
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <span>
+            <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
+            <?php echo "<h3 style='display:inline'>$current_user, this is Account 1</h3><hr>";?>
+          </span>
 
-        <h3><b>Debit</b></h3>
-        <a href="#"><sup>View ledger</sup></a>
-        <p><pre>   Balance: <input type="number" name=""></pre></p>
-        <br><br><br>
-        <h3><b>Credit</b></h3>
-        <a href="#"><sup>View ledger</sup></a>
-        <p><pre>   Available credit: <input type="number" name=""></pre></p>
-        <br>
-        <p><pre>   Balance:          <input type="number" name=""></pre></p>
-        <br><br><br>
-        <button>Update</button>
-        <br><br>
+          <h3><b>Debit</b></h3>
+          <a href="#"><sup>View ledger</sup></a>
+          <p><pre>   Balance: <input type="number" name="debBal"></pre></p>
+          <br><br><br>
+          <h3><b>Credit</b></h3>
+          <a href="#"><sup>View ledger</sup></a>
+          <p><pre>   Available credit: <input type="number" name="avalCre"></pre></p>
+          <br>
+          <p><pre>   Balance:          <input type="number" name="creBal"></pre></p>
+          <br><br><br>
+          <pre class="col-md-6">         Bank name: <input type="text" name="bank_name">   <input type="submit" value="Update entries"> </pre>
+          <br><br>
+        </div>
+        <!-- page-content-wrapper -->
       </div>
-      <!-- page-content-wrapper -->
-    </div>
+    </form>
     <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
