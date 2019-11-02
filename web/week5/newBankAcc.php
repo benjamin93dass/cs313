@@ -65,7 +65,7 @@
     <!-- /#sidebar-wrapper --> 
 
     <!-- Page Content -->
-    <form action="createNewAccount.php" method="POST">
+    <form action="r_newBankAcc.php" method="POST">
       <div id="page-content-wrapper">
         <div class="container-fluid">
           <span>
@@ -86,7 +86,7 @@
                 <input type="radio" name="nName" value="US Bank" autocomplete="off"> US Bankcorp/U.S. Bank
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="PNC" autocomplete="off"> PNC
+                <input type="radio" name="nName" value="BSN" autocomplete="off"> BSN
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
                 <input type="radio" name="nName" value="New York - Mellon" autocomplete="off"> Bank of New York Mellon

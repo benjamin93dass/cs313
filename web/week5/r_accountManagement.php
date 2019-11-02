@@ -5,13 +5,27 @@
     $bank_name = $_POST['nName'];
 
 
-    if ($bank_name == "usbank" || $bank_name == "USBank" || $bank_name == "US Bank") {
+    if ($bank_name == "US Bank") {
         $id = 1;
-    } else if ($bank_name == "Bee Hive" || $bank_name == "beehive" || $bank_name == "Beehive" || $bank_name == "BeeHive") {
+    } else if ($bank_name == "BeeHive FCU") {
         $id = 2;
-    } else if ($bank_name == "BSN" || $bank_name == "bsn") {
+    } else if ($bank_name == "BSN") {
         $id = 3;
-    } else {
+    } else if ($bank_name == "Wells Fargo") {
+        $id = 4;
+    }else if ($bank_name == "Citi") {
+        $id = 5;
+    }else if ($bank_name == "New York - Mellon") {
+        $id = 6;
+    }else if ($bank_name == "State Street") {
+        $id = 7;
+    }else if ($bank_name == "Capitol One") {
+        $id = 8;
+    }else if ($bank_name == "TD Bank") {
+        $id = 9;
+    }else if ($bank_name == "Mountain America") {
+        $id = 10;
+    }else {
         $id = 0;
     }
 

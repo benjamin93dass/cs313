@@ -71,7 +71,7 @@
     <!-- /#sidebar-wrapper --> 
 
     <!-- Page Content -->
-    <form action="applyChanges.php" method="POST">
+    <form action="r_accountManagement.php" method="POST">
       <div id="page-content-wrapper">
         <div class="container-fluid">
           <span>
