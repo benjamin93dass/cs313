@@ -89,12 +89,14 @@
           <br>
           <p><pre>   Balance:          <input type="number" name="creBal"></pre></p>
           <br><br><br>
-          <?php
-              foreach ($bank_names as $bank_name) {
-                $name = $bank_name['bank_name'];
-                echo "<label class='btn btn-secondary' style='margin-right:15px;'><input type='radio' name='nName' value='' autocomplete='off'>" . $name . "</label>";
-              }
-          ?>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <?php
+                foreach ($bank_names as $bank_name) {
+                  $name = $bank_name['bank_name'];
+                  echo "<label class='btn btn-secondary' style='margin-right:15px;'><input type='radio' name='nName' value='' autocomplete='off'>" . $name . "</label>";
+                }
+            ?>
+          </div>
           <input type="submit" value="Update entries">
           <br><br>
         </div>
