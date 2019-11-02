@@ -3,8 +3,9 @@
     $aval_cre = $_POST['avalCre'];
     $cre_bal = $_POST['creBal'];
     $bank_name = $_POST['name'];
-    echo $bank_name;
-    sleep(3);
+    echo ("<script LANGUAGE='JavaScript'>
+    window.alert('". $bank_name ."');';
+    </script>");
 
 
     if ($bank_name == "usbank" || $bank_name == "USBank" || $bank_name == "US Bank") {
