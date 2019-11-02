@@ -33,26 +33,5 @@
 </div>
 </p>
 
-<?php
-    $x = 1;
-    foreach ($bank_names as $bank_name) {
-        echo "<label class="btn btn-secondary" style="margin-right:15px;"><input type="radio" name="nName" value="$bank_name" autocomplete="off"> $bank_name</label>";
-    }
-?>
-
-        $x = 1;
-        foreach ($bank_infos as $bank_info) {
-            $deb_bal = $bank_info['debit_balance'];
-            $aval_cre = $bank_info['available_credit'];
-            $cre_bal = $bank_info['credit_balance'];
-            $id = $bank_info['name'];
-            $name = $bank_info['bank_name'];
-            if ($id == 1) {
-                echo "<h5><i>Account $name Summary</i></h5>";
-                echo "<p><pre>   Debit Balance: " . $deb_bal . "</pre></p>";
-                echo "<p><pre>   Available credit: " . $aval_cre . "</pre></p>";
-                echo "<p><pre>   Credit Balance: " . $cre_bal . "</pre></p>";
-                echo "<br>";
-            }
-            $x++;
-        }
+<label class="btn btn-secondary" style="margin-right:15px;">
+    <input type="radio" name="nName" value="$name" autocomplete="off">$name</label>
