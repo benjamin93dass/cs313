@@ -65,26 +65,28 @@
     <!-- /#sidebar-wrapper --> 
 
     <!-- Page Content -->
-    <div id="page-content-wrapper">
-      <div class="container-fluid">
-      <span>
-        <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
-        <?php echo "<h3 style='display:inline'>$current_user, adding a new Bank entry?</h3>";?>
-      </span>
+    <form action="createNewAccount.php" method="POST">
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <span>
+            <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
+            <?php echo "<h3 style='display:inline'>$current_user, adding a new Bank entry?</h3>";?>
+          </span>
 
-        <h3><b>Please enter the following information:</b></h3>
-        <p><pre>   Bank Name: <input type="text" name=""></pre></p>
-        <br>
-        <p><pre>   Debit balance: <input type="number" name=""></pre></p>
-        <br>
-        <p><pre>   Available credit:          <input type="number" name=""></pre></p>
-        <br>
-        <p><pre>   Credit balance:          <input type="number" name=""></pre></p>
-        <button>Add account</button>
-        <br><br>
+          <h3><b>Please enter the following information:</b></h3>
+          <p><pre>   Bank Name: <input type="text" name="nName"></pre></p>
+          <br>
+          <p><pre>   Debit balance: <input type="number" name="nDebBal"></pre></p>
+          <br>
+          <p><pre>   Available credit:          <input type="number" name="nAvalCre"></pre></p>
+          <br>
+          <p><pre>   Credit balance:          <input type="number" name="nCreBal"></pre></p>
+          <button>Add account</button>
+          <br><br>
+        </div>
+        <!-- page-content-wrapper -->
       </div>
-      <!-- page-content-wrapper -->
-    </div>
+    </form>
     <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
