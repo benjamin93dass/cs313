@@ -90,7 +90,7 @@
           <p><pre>   Balance:          <input type="number" name="creBal"></pre></p>
           <br><br><br>
           <?php
-              var_dump($bank_names);
+              //var_dump($bank_names);
               foreach ($bank_names as $bank_name) {
                 echo "\n";
                 var_dump($bank_name);
