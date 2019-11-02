@@ -19,7 +19,7 @@
   }
 
   // Requesting person_table information
-  $query = 'SELECT bank_name FROM bank_account';
+  $query = 'SELECT bank_name FROM bank_account WHERE name=1';
   $stmt = $db->prepare($query);
   $stmt->execute();
   $bank_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
