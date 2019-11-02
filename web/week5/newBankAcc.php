@@ -18,20 +18,21 @@
     $current_user = $person_name['person_name'];
   }
 
-  $allBanks = array("US Bank", "BeeHive", "BSN", "Wells Fargo", "TD Bank", "New York - Melon", "Mountain America", "Capitol One", "Citi", "State Street");
   $query = 'SELECT bank_name FROM bank_account WHERE name=1';
   $stmt = $db->prepare($query);
   $stmt->execute();
   $bank_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  $total_available_banks = 10;
+  $allBanks = array("US Bank", "BeeHive", "BSN", "Wells Fargo", "TD Bank", "New York - Melon", "Mountain America", "Capitol One", "Citi", "State Street");
   foreach ($bank_names as $bank_name) {
     for($x = 0; $x <= 9; $x++){
       if ($allBanks[$x] == $bank_name['bank_name']){
         unset($allBanks[$x]);
-        //echo "called" . $x;
+        $total_available_banks--;
       }
     }
   }
-  var_dump($allBanks);
 ?>
 
 <!DOCTYPE html>
@@ -89,38 +90,13 @@
           </span>
 
           <h3><b>Please enter the following information:</b></h3>
-          <p>Current banks we serve:
+          <p>New Banks you can add:
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
-              <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="Wells Fargo" autocomplete="off"> Wells Fargo
-              </label>
-              <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="Citi" autocomplete="off"> Citi
-              </label>
-              <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="US Bank" autocomplete="off"> US Bankcorp/U.S. Bank
-              </label>
-              <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="BSN" autocomplete="off"> BSN
-              </label>
-              <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="New York - Mellon" autocomplete="off"> Bank of New York Mellon
-              </label>
-              <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="State Street" autocomplete="off"> State Street
-              </label>
-              <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="Capitol One" autocomplete="off"> Capital One
-              </label>
-              <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="TD Bank" autocomplete="off"> TD Bank
-              </label>
-              <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="Mountain America" autocomplete="off"> Mountain America
-              </label>
-              <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" name="nName" value="BeeHive FCU" autocomplete="off"> BeeHive FCU
-              </label>
+              <?php
+                for ($x = 0; $x = $total_available_banks; $x++) {
+                  echo "<label class='btn btn-secondary' style='margin-right:15px;'><input type='radio' name='nName' value='" . $allBanks[$x] . "' autocomplete='off'>" . $allBanks[$x] . "</label>";
+                }
+              ?>
             </div>
           </p>
           <br>
