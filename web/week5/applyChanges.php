@@ -3,6 +3,8 @@
     $aval_cre = $_POST['avalCre'];
     $cre_bal = $_POST['creBal'];
     $bank_name = $_POST['name'];
+    var_dump($bank_name);
+    sleep(3);
 
 
     if ($bank_name == "usbank" || $bank_name == "USBank" || $bank_name == "US Bank") {
