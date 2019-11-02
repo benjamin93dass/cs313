@@ -23,6 +23,9 @@
   $stmt = $db->prepare($query);
   $stmt->execute();
   $bank_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  foreach ($bank_names as $bank_name) {
+    $current_bNames = $bank_name['bank_name'];
+  }
 ?>
 
 <!DOCTYPE html>
@@ -91,8 +94,8 @@
           <br><br><br>
           <?php
               $x = 1;
-              foreach ($bank_names as $bank_name) {
-                  echo "<label class="btn btn-secondary" style="margin-right:15px;"><input type="radio" name="nName" value="$bank_name" autocomplete="off"> $bank_name</label>";
+              foreach ($current_bNames as $current_bName) {
+                  echo "<label class="btn btn-secondary" style="margin-right:15px;"><input type="radio" name="nName" value="$current_bName" autocomplete="off"> $current_bName</label>";
               }
           ?>
           <input type="submit" value="Update entries">
