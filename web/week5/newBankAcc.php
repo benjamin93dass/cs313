@@ -95,7 +95,7 @@
               <?php
                 for ($x = 0; $x < $total_available_banks; $x++) {
                   
-                  //var_dump($allBanks[$x]);
+                  var_dump($allBanks[$x]);
                   echo "<label class='btn btn-secondary' style='margin-right:15px;'><input type='radio' name='nName' value='" . $allBanks[$x] . "' autocomplete='off'>" . $allBanks[$x] . "</label>";
                 }
               ?>
