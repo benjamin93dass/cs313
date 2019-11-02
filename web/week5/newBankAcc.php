@@ -94,7 +94,7 @@
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <?php
               //var_dump($total_available_banks);
-                for ($x = 0; $x = $total_available_banks; $x++) {
+                for ($x = 0; $x < $total_available_banks; $x++) {
                   var_dump($x);
                   
                   //var_dump($allBanks[$x]);
