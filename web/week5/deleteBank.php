@@ -17,6 +17,22 @@
   foreach ($person_names as $person_name) {
     $current_user = $person_name['person_name'];
   }
+
+  $query = 'SELECT bank_name FROM bank_account WHERE name=1';
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+  $bank_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+  $total_available_banks = 10;
+  $allBanks = array("US Bank", "BeeHive", "BSN", "Wells Fargo", "TD Bank", "New York - Melon", "Mountain America", "Capitol One", "Citi", "State Street");
+  foreach ($bank_names as $bank_name) {
+    for($x = 0; $x <= 9; $x++){
+      if ($allBanks[$x] == $bank_name['bank_name']){
+        unset($allBanks[$x]);
+        $total_available_banks--;
+      }
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +45,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Accounts</title>
+  <title>Delete Bank</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -56,9 +72,9 @@
       <ul class="sidebar-nav">
         <li class="sidebar-brand"><?php echo "<span style='display:inline;color:#CCCC99'><i>Current user: </i><b> $current_username </b></span>" ?></li>
         <li><a href="index.php">Summary of Accounts</a></li>
-        <li><a href="account1.php">Account 1</a></li>
-        <li><a href="account2.php">Account 2</a></li>
-        <li><a href="account3.php">Account 3</a></li>
+        <li><a href="accountManagement.php">Account management</a></li>
+        <li><a href="newBankAcc.php">+ Add a new Bank</a></li>
+        <li><a href="deleteBank.php">- Delete bank entry</a></li>
         <li><a href="settings.php">Settings</a></li>
         <li><a href="help.php">Help</a></li>
       </ul>
@@ -66,28 +82,36 @@
     <!-- /#sidebar-wrapper --> 
 
     <!-- Page Content -->
-    <div id="page-content-wrapper">
-      <div class="container-fluid">
-        <span>
-          <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
-          <?php echo "<h3 style='display:inline'>$current_user, this is Account 2</h3><hr>";?>
-        </span>
+    <form action="r_deleteBank.php" method="POST">
+      <div id="page-content-wrapper">
+        <div class="container-fluid">
+          <span>
+            <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
+            <?php echo "<h3 style='display:inline'>$current_user, deleting a Bank entry?</h3>";?>
+          </span>
 
-        <h3><b>Debit</b></h3>
-        <a href="#"><sup>View ledger</sup></a>
-        <p><pre>   Balance: <input type="number" name=""></pre></p>
-        <br><br><br>
-        <h3><b>Credit</b></h3>
-        <a href="#"><sup>View ledger</sup></a>
-        <p><pre>   Available credit: <input type="number" name=""></pre></p>
-        <br>
-        <p><pre>   Balance:          <input type="number" name=""></pre></p>
-        <br><br><br>
-        <button>Update</button>
-        <br><br>
+          <h3><b>Please enter the following information:</b></h3>
+          <p>Which bank entry would you like to delete?
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <?php
+                for ($x = 0; $x < 10; $x++) {
+                  if ($allBanks[$x] == NULL){
+                    // do nothing
+                  } else {
+                    echo "<label class='btn btn-secondary' style='margin-right:15px;'><input type='radio' name='nName' value='" . $allBanks[$x] . "' autocomplete='off'>" . $allBanks[$x] . "</label>";
+                  } 
+                }
+              ?>
+            </div>
+          </p>
+          <br>
+          <p>Are you sure?</p>
+          <button>Yes!</button><input type="button" value="No" onclick="window.location.href='index.php';"/>
+          <br><br>
+        </div>
+        <!-- page-content-wrapper -->
       </div>
-      <!-- page-content-wrapper -->
-    </div>
+    </form>
     <!-- /#wrapper -->
 
     <!-- Bootstrap core JavaScript -->
