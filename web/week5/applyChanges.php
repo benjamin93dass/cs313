@@ -2,7 +2,8 @@
     $deb_bal = $_POST['debBal'];
     $aval_cre = $_POST['avalCre'];
     $cre_bal = $_POST['creBal'];
-    $bank_name = $_POST['bank_name'];
+    $bank_name = $_POST['name'];
+
 
     if ($bank_name == "usbank" || $bank_name == "USBank" || $bank_name == "US Bank") {
         $id = 1;
