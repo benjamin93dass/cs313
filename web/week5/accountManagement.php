@@ -90,7 +90,9 @@
           <p><pre>   Balance:          <input type="number" name="creBal"></pre></p>
           <br><br><br>
           <?php
+              var_dump($bank_names);
               foreach ($bank_names as $bank_name) {
+                var_dump($bank_name);
                 echo "$bank_name";
                   /*echo "<label class="btn btn-secondary" style="margin-right:15px;"><input type="radio" name="nName" value="$current_bName" autocomplete="off"> $current_bName</label>";*/
               }
