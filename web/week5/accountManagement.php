@@ -17,6 +17,12 @@
   foreach ($person_names as $person_name) {
     $current_user = $person_name['person_name'];
   }
+
+  // Requesting person_table information
+  $query = 'SELECT bank_name FROM bank_account';
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+  $bank_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +89,13 @@
           <br>
           <p><pre>   Balance:          <input type="number" name="creBal"></pre></p>
           <br><br><br>
-          <p><pre>      Bank name: <input type="text" name="bank_name">   <input type="submit" value="Update entries"> </pre></p>
+          <?php
+              $x = 1;
+              foreach ($bank_names as $bank_name) {
+                  echo "<label class="btn btn-secondary" style="margin-right:15px;"><input type="radio" name="nName" value="$bank_name" autocomplete="off"> $bank_name</label>";
+              }
+          ?>
+          <input type="submit" value="Update entries">
           <br><br>
         </div>
         <!-- page-content-wrapper -->
