@@ -26,7 +26,7 @@
   foreach ($bank_names as $bank_name) {
     $current_bNames = $bank_name['bank_name'];
   }
-  var_dump($current_bNames);
+  var_dump($bank_names);
 ?>
 
 <!DOCTYPE html>
