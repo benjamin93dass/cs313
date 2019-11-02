@@ -22,17 +22,6 @@
   $stmt = $db->prepare($query);
   $stmt->execute();
   $bank_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-  $total_available_banks = 10;
-  $allBanks = array("US Bank", "BeeHive", "BSN", "Wells Fargo", "TD Bank", "New York - Melon", "Mountain America", "Capitol One", "Citi", "State Street");
-  foreach ($bank_names as $bank_name) {
-    for($x = 0; $x <= 9; $x++){
-      if ($allBanks[$x] == $bank_name['bank_name']){
-        unset($allBanks[$x]);
-        $total_available_banks--;
-      }
-    }
-  }
 ?>
 
 <!DOCTYPE html>
@@ -90,16 +79,11 @@
             <?php echo "<h3 style='display:inline'>$current_user, deleting a Bank entry?</h3>";?>
           </span>
 
-          <h3><b>Please enter the following information:</b></h3>
-          <p>Which bank entry would you like to delete?
+          <h3>Which bank entry would you like to delete?</h3>
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <?php
-                for ($x = 0; $x < 10; $x++) {
-                  if ($allBanks[$x] == NULL){
-                    // do nothing
-                  } else {
-                    echo "<label class='btn btn-secondary' style='margin-right:15px;'><input type='radio' name='nName' value='" . $allBanks[$x] . "' autocomplete='off'>" . $allBanks[$x] . "</label>";
-                  } 
+                foreach ($bank_names as $bank_name){
+                  echo "<label class='btn btn-secondary' style='margin-right:15px;'><input type='radio' name='dName' value='" . $bank_name['bank_name'] . "' autocomplete='off'>" . $bank_name['bank_name'] . "</label>";
                 }
               ?>
             </div>

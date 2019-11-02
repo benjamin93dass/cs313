@@ -70,3 +70,5 @@ VALUES
 SELECT * FROM bank_account bc 
 JOIN person p ON bc.name = p.id
 WHERE p.person_name = 'Benjamin';
+
+DELETE FROM bank_account WHERE bank_name = 'dName';

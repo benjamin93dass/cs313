@@ -1,8 +1,5 @@
 <?php
-    $bank_name = $_POST['nName'];
-    $deb_bal = $_POST['nDebBal'];
-    $aval_cre = $_POST['nAvalCre'];
-    $cre_bal = $_POST['nCreBal'];
+    $bank_name = $_POST['dName'];
 
     require('dbconnect.php');
     $db = get_db();
