@@ -2,10 +2,7 @@
     $deb_bal = $_POST['debBal'];
     $aval_cre = $_POST['avalCre'];
     $cre_bal = $_POST['creBal'];
-    $bank_name = $_POST['name'];
-    echo ("<script LANGUAGE='JavaScript'>
-    window.alert('". $bank_name ."');';
-    </script>");
+    $bank_name = $_POST['nName'];
 
 
     if ($bank_name == "usbank" || $bank_name == "USBank" || $bank_name == "US Bank") {
