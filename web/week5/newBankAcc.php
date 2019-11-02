@@ -24,16 +24,11 @@
   $stmt->execute();
   $bank_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach ($bank_names as $bank_name) {
-    foreach ($allBanks as $allBank) {
-      $x = 0;
-      var_dump($all_bank[$x]);
-      echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
-      var_dump($bank_name['bank_name']);
-      if ($allBank[$x] == $bank_name['bank_name']){
+    for($x = 0; $x <= 9; $x++){
+      if ($allBanks[$x] == $bank_name['bank_name']){
         unset($allBanks[$x]);
         echo "called" . $x;
       }
-      $x++;
     }
   }
   //var_dump($allBanks);
