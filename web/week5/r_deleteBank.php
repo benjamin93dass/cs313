@@ -5,12 +5,9 @@
     $db = get_db();
 
     try {
-        $update_query = 'INSERT INTO bank_account (bank_name, debit_balance, available_credit, credit_balance, name) VALUES (:bank_name, :debit_balance, :available_credit, :credit_balance, 1);';
+        $update_query = 'DELETE FROM bank_account WHERE bank_name = ':dName';';
         $stmt = $db->prepare($update_query);
-        $stmt->bindValue(':bank_name', $bank_name);
-        $stmt->bindValue(':debit_balance', $deb_bal);
-        $stmt->bindValue(':available_credit', $aval_cre);
-        $stmt->bindValue(':credit_balance', $cre_bal);
+        $stmt->bindValue(':dName', $bank_name);
         $stmt->execute();
     } catch (Exception $ex) {
         echo "Error with DB. Details: $ex";
