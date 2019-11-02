@@ -27,11 +27,11 @@
     for($x = 0; $x <= 9; $x++){
       if ($allBanks[$x] == $bank_name['bank_name']){
         unset($allBanks[$x]);
-        echo "called" . $x;
+        //echo "called" . $x;
       }
     }
   }
-  //var_dump($allBanks);
+  var_dump($allBanks);
 ?>
 
 <!DOCTYPE html>
