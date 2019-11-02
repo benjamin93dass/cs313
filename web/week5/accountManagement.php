@@ -95,7 +95,7 @@
                 echo "\n";
                 var_dump($bank_name);
                 echo"\n";
-                echo "$bank_name";
+                //echo "$bank_name";
                   /*echo "<label class="btn btn-secondary" style="margin-right:15px;"><input type="radio" name="nName" value="$current_bName" autocomplete="off"> $current_bName</label>";*/
               }
           ?>
