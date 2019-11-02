@@ -93,10 +93,12 @@
           <p>New Banks you can add:
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <?php
-                for ($x = 0; $x < $total_available_banks; $x++) {
-                  
-                  var_dump($allBanks[$x]);
-                  echo "<label class='btn btn-secondary' style='margin-right:15px;'><input type='radio' name='nName' value='" . $allBanks[$x] . "' autocomplete='off'>" . $allBanks[$x] . "</label>";
+                for ($x = 0; $x < 10; $x++) {
+                  if ($allBanks[$x] == NULL){
+                    // do nothing
+                  } else {
+                    echo "<label class='btn btn-secondary' style='margin-right:15px;'><input type='radio' name='nName' value='" . $allBanks[$x] . "' autocomplete='off'>" . $allBanks[$x] . "</label>";
+                  } 
                 }
               ?>
             </div>
