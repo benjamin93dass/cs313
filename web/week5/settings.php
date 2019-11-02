@@ -57,6 +57,7 @@
         <li class="sidebar-brand"><?php echo "<span style='display:inline;color:#CCCC99'><i>Current user: </i><b> $current_username </b></span>" ?></li>
         <li><a href="index.php">Summary of Accounts</a></li>
         <li><a href="accountManagement.php">Account management</a></li>
+        <li><a href="newBankAcc.php">+ Add a new Bank</a></li>
         <li><a href="settings.php">Settings</a></li>
         <li><a href="help.php">Help</a></li>
       </ul>

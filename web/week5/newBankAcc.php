@@ -29,7 +29,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Accounts</title>
+  <title>Add Bank</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -56,9 +56,8 @@
       <ul class="sidebar-nav">
         <li class="sidebar-brand"><?php echo "<span style='display:inline;color:#CCCC99'><i>Current user: </i><b> $current_username </b></span>" ?></li>
         <li><a href="index.php">Summary of Accounts</a></li>
-        <li><a href="account1.php">Account 1</a></li>
-        <li><a href="account2.php">Account 2</a></li>
-        <li><a href="account3.php">Account 3</a></li>
+        <li><a href="accountManagement.php">Account management</a></li>
+        <li><a href="newBankAcc.php">+ Add a new Bank</a></li>
         <li><a href="settings.php">Settings</a></li>
         <li><a href="help.php">Help</a></li>
       </ul>
@@ -68,22 +67,16 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
       <div class="container-fluid">
-        <span>
-          <img src="menu.svg" width="30" height="30" class="d-inline-block align-top" id="menu-toggle">
-          <?php echo "<h3 style='display:inline'>$current_user, this is Account 3</h3><hr>";?>
-        </span>
 
-        <h3><b>Debit</b></h3>
-        <a href="#"><sup>View ledger</sup></a>
-        <p><pre>   Balance: <input type="number" name=""></pre></p>
-        <br><br><br>
-        <h3><b>Credit</b></h3>
-        <a href="#"><sup>View ledger</sup></a>
-        <p><pre>   Available credit: <input type="number" name=""></pre></p>
+        <h3><b>Please enter the following information:</b></h3>
+        <p><pre>   Bank Name: <input type="text" name=""></pre></p>
         <br>
-        <p><pre>   Balance:          <input type="number" name=""></pre></p>
-        <br><br><br>
-        <button>Update</button>
+        <p><pre>   Debit balance: <input type="number" name=""></pre></p>
+        <br>
+        <p><pre>   Available credit:          <input type="number" name=""></pre></p>
+        <br>
+        <p><pre>   Credit balance:          <input type="number" name=""></pre></p>
+        <button>Add account</button>
         <br><br>
       </div>
       <!-- page-content-wrapper -->
