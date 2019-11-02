@@ -7,23 +7,23 @@
 
     if ($bank_name == "US Bank") {
         $id = 1;
-    } else if ($bank_name == "BeeHive FCU") {
+    } else if ($bank_name == "BeeHive") {
         $id = 2;
     } else if ($bank_name == "BSN") {
         $id = 3;
     } else if ($bank_name == "Wells Fargo") {
         $id = 4;
-    }else if ($bank_name == "Citi") {
+    }else if ($bank_name == "TD Bank") {
         $id = 5;
     }else if ($bank_name == "New York - Mellon") {
         $id = 6;
-    }else if ($bank_name == "State Street") {
+    }else if ($bank_name == "Mountain America") {
         $id = 7;
     }else if ($bank_name == "Capitol One") {
         $id = 8;
-    }else if ($bank_name == "TD Bank") {
+    }else if ($bank_name == "Citi") {
         $id = 9;
-    }else if ($bank_name == "Mountain America") {
+    }else if ($bank_name == "State Street") {
         $id = 10;
     }else {
         $id = 0;
