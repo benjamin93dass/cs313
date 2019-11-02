@@ -25,11 +25,11 @@
   $bank_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
   foreach ($bank_names as $bank_name) {
     foreach ($allBanks as $allBank) {
-      /*x = 0;
+      $x = 0;
       if ($allBank == $bank_name){
-        unset($allBanks[x]);
+        unset($allBanks[$x]);
       }
-      x++;*/
+      $x++;
     }
   }
   var_dump($allBanks);
