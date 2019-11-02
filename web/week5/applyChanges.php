@@ -3,7 +3,7 @@
     $aval_cre = $_POST['avalCre'];
     $cre_bal = $_POST['creBal'];
     $bank_name = $_POST['name'];
-    var_dump($bank_name);
+    echo $bank_name;
     sleep(3);
 
 
