@@ -27,6 +27,7 @@
     foreach ($allBanks as $allBank) {
       $x = 0;
       var_dump($all_bank);
+      echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
       var_dump($bank_name['bank_name']);
       if ($allBank == $bank_name['bank_name']){
         unset($allBanks[$x]);
@@ -35,7 +36,7 @@
       $x++;
     }
   }
-  var_dump($allBanks);
+  //var_dump($allBanks);
 ?>
 
 <!DOCTYPE html>
