@@ -99,7 +99,7 @@
               ?>
             </div>
           </p>
-          <p><input type="submit" value="Update entries"></p>
+          <p><input type="submit" value="Update entries" onclick="alert(<?php echo $name;?>)"></p>
           <br><br>
         </div>
         <!-- page-content-wrapper -->
