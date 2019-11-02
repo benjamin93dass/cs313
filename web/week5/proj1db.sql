@@ -70,5 +70,3 @@ VALUES
 SELECT * FROM bank_account bc 
 JOIN person p ON bc.name = p.id
 WHERE p.person_name = 'Benjamin';
-
-INSERT INTO bank_account (bank_name, debit_balance, available_credit, credit_balance, name) VALUES (:bank_name, :debit_balance, :available_credit, :credit_balance, 1);
