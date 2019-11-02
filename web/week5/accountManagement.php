@@ -93,8 +93,7 @@
               //var_dump($bank_names);
               foreach ($bank_names as $bank_name) {
                 $name = $bank_name['bank_name'];
-                echo "$name";
-                  /*echo "<label class="btn btn-secondary" style="margin-right:15px;"><input type="radio" name="nName" value="$current_bName" autocomplete="off"> $current_bName</label>";*/
+                echo "<label class="btn btn-secondary" style="margin-right:15px;"><input type="radio" name="nName" value="$name" autocomplete="off"> $name</label>";
               }
           ?>
           <input type="submit" value="Update entries">
