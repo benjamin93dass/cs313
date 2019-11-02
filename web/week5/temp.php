@@ -33,5 +33,8 @@
 </div>
 </p>
 
+<label class="btn btn-secondary" style="margin-right:15px;"><input type="radio" name="nName" value="$name" autocomplete="off">$name</label>
+
+
 <label class="btn btn-secondary" style="margin-right:15px;">
-    <input type="radio" name="nName" value="$name" autocomplete="off">$name</label>
+</label>
