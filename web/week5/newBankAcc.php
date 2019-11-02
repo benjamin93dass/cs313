@@ -26,10 +26,10 @@
   foreach ($bank_names as $bank_name) {
     foreach ($allBanks as $allBank) {
       $x = 0;
-      var_dump($all_bank);
+      var_dump($all_bank[$x]);
       echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
       var_dump($bank_name['bank_name']);
-      if ($allBank == $bank_name['bank_name']){
+      if ($allBank{$x} == $bank_name['bank_name']){
         unset($allBanks[$x]);
         echo "called" . $x;
       }
