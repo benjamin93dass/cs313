@@ -5,7 +5,7 @@
     $db = get_db();
 
     try {
-        $update_query = 'DELETE FROM bank_account WHERE bank_name = ':dName';';
+        $update_query = 'DELETE FROM bank_account WHERE bank_name=:dName;';
         $stmt = $db->prepare($update_query);
         $stmt->bindValue(':dName', $bank_name);
         $stmt->execute();
