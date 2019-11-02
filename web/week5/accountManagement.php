@@ -92,7 +92,7 @@
           <?php
               foreach ($bank_names as $bank_name) {
                 $name = $bank_name['bank_name'];
-                echo "";
+                echo "<input type='radio'>" . $name;
               }
           ?>
           <input type="submit" value="Update entries">
