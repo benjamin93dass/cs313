@@ -77,34 +77,34 @@
           <p>Current banks we serve:
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" autocomplete="off"> Wells Fargo
+                <input type="radio" name="radio" value="Wells Fargo" autocomplete="off"> Wells Fargo
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" autocomplete="off"> Citi
+                <input type="radio" name="radio" value="Citi" autocomplete="off"> Citi
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" autocomplete="off"> US Bankcorp/U.S. Bank
+                <input type="radio" name="radio" value="US Bank" autocomplete="off"> US Bankcorp/U.S. Bank
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" autocomplete="off"> PNC
+                <input type="radio" name="radio" value="PNC" autocomplete="off"> PNC
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" autocomplete="off"> Bank of New York Mellon
+                <input type="radio" name="radio" value="New York - Mellon" autocomplete="off"> Bank of New York Mellon
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" autocomplete="off"> State Street
+                <input type="radio" name="radio" value="State Street" autocomplete="off"> State Street
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" autocomplete="off"> Capital One
+                <input type="radio" name="radio" value="Capitol One" autocomplete="off"> Capital One
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" autocomplete="off"> TD Bank
+                <input type="radio" name="radio" value="TD Bank" autocomplete="off"> TD Bank
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" autocomplete="off"> Mountain America
+                <input type="radio" name="radio" value="Mountain America" autocomplete="off"> Mountain America
               </label>
               <label class="btn btn-secondary" style="margin-right:15px;">
-                <input type="radio" autocomplete="off"> BeeHive FCU
+                <input type="radio" name="radio" value="BeeHive FCU" autocomplete="off"> BeeHive FCU
               </label>
             </div>
           </p>
