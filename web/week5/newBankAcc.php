@@ -17,6 +17,22 @@
   foreach ($person_names as $person_name) {
     $current_user = $person_name['person_name'];
   }
+
+  $allBanks = array("US Bank", "BeeHive", "BSN", "Wells Fargo", "TD Bank", "New York - Melon", "Mountain America", "Capitol One", "Citi", "State Street");
+  $query = 'SELECT bank_name FROM bank_account WHERE name=1';
+  $stmt = $db->prepare($query);
+  $stmt->execute();
+  $bank_names = $stmt->fetchAll(PDO::FETCH_ASSOC);
+  foreach ($bank_names as $bank_name) {
+    foreach ($allBanks as $allBank) {
+      x = 0;
+      if ($allBank == $bank_name){
+        unset($allBanks[x]);
+      }
+      x++;
+    }
+  }
+  var_dump($allBanks);
 ?>
 
 <!DOCTYPE html>
